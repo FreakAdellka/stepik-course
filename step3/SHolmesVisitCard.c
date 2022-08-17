@@ -3,7 +3,7 @@
 int main() {
   setbuf(stdout, NULL);
   printf("S.Holmes:\n");
-  printf("%igrad %i'%i.%i\" N \n",51, 31, 25, 48);
-  printf("%i grad  %i'%i.%i\" W \n",0, 9, 29, 93);
+  printf("51grad 31\'25.48\" N\n");
+  printf("0 grad  9\'29.93\" W");
   return 0;
 }
