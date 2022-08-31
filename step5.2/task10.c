@@ -9,9 +9,8 @@ int main(void) {
 	
 	int x;
 	scanf("%i", &x);
-	int a = x % 100;
-	int b = x / 100;
-	int res = (a * 10) + b;
+	int a = x / 60;
+	int res = x - (a * 60);
 	printf("%i", res);
 
 	return 0;

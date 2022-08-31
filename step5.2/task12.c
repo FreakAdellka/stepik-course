@@ -9,10 +9,8 @@ int main(void) {
 	
 	int x;
 	scanf("%i", &x);
-	int a = x % 100;
-	int b = x / 100;
-	int res = (a * 10) + b;
-	printf("%i", res);
+	double a = (double)(x + 4) / 7;
+	printf("%.0lf", ceil(a));
 
 	return 0;
 }
