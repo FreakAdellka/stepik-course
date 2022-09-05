@@ -7,12 +7,12 @@
 int main(void) {
 	setbuf(stdout,NULL);
 	
-	int f, d;
-	scanf("%i %i", &f, &d);
-	double mm = ((f * 12) + d) * 25.4;
+	int f;
+	scanf("%i", &f);
+	double celcium = (5  * ((double)f - 32))/9;
 	
 	
-	printf("%i\'%i\" = %.2lfm.", f, d, mm/1000);
+	printf("%.2lf", celcium);
 
 	return 0;
 }
