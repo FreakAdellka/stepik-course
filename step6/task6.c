@@ -11,17 +11,17 @@ int main(void) {
 	setlocale(LC_ALL, "");
 
 	char z;
-	float a, b;
-	scanf("%c %f %f",&z, &a, &b);
+	int a, b;
+	scanf("%i %i %c",&a, &b, &z);
 
 	switch (z) {
 	default  : printf("ERROR!\n"); break;
-	case '+' : printf("%.2f", a+b); break;
-	case '-' : printf("%.2f", a-b); break;
-	case '*' : printf("%.2f", a*b ); break;
-	case '/' : switch ((int)b){
-				case b=0 : printf("ERROR!\n"); break;
-				case b!=0 : printf("%.2f", a/b ); break;
+	case '+' : printf("%.2f", (float)a+(float)b); break;
+	case '-' : printf("%.2f", (float)a-(float)b); break;
+	case '*' : printf("%.2f", (float)a*(float)b ); break;
+	case '/' : switch	 (b){
+				case 0 : printf("ERROR!\n"); break;
+				default : printf("%.2lf", (double)a/(double)b ); break;
 				}				
 				break;
 
