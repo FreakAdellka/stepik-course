@@ -10,16 +10,16 @@ int main(void) {
 	setbuf(stdout,NULL);
 	setlocale(LC_ALL, "");
 	
-	int a, b;
-	int x = 1;
-	scanf("%i %i", &a, &b);
-	for(int k = a; k<=b; k++){
-		
-		for(int i = 1; i <= x ; i++){
-			printf("%5.0i", k);
+	int a;
+	scanf("%i", &a);
+	int k = 0;
+	for(int i = 1; i<=a; i++){
+		if(a%i == 0){
+			k++;
 		}
-		x++;
 	}
+	if(k>2) printf("0");
+	if(k==2) printf("1");
 	
 	
 return 0;
