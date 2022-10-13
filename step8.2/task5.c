@@ -12,43 +12,38 @@ int main(void) {
 	
 	int n;
 	scanf("%i", &n);
-	int mass1[10][10];
-	int mass2[10][10];
 	int mass[10][10];
 	
 	for(int i = 0; i<n; i++){
 		for(int j = 0; j<n; j++){
-			mass1[i][j] = 0;
-			mass2[i][j] = 0;
+			scanf("%i", &mass[i][j]);
 			
 		}
 	}
+	int a = 1;
+	int b = 1;
+	int x = n-1;
 	
 	for(int i = 0; i< n; i++){
-		int a = 1;
-		for(int j = i;j<=n-i+8; j++){
-			mass1[i][j] = a;
-			a++;
+		for(int j = 0; j<n; j++){
+			int y = i+j;
+			if(i == j)a = a*mass[i][j];
+			if(y == x) b = b*mass[i][j];
 		}
 	}
-
-	for(int i = 0; i< n; i++){
-		int b = 1;
-		for(int j = i;j<=n-j+8; j++){
-			mass1[j][i] = b;
-			b++;
-		}
-	}
-
 	
-	
-		
+/*	
 	for(int i = 0; i<n; i++){//вывод массива
 		for(int j = 0; j<n; j++){
-			printf("%2i ", mass1[i][j]);
+			printf("%2i ", mass[i][j]);
 		}
 		printf("\n");
 	}
+*/	
+
+	if(a > b) printf("%i %i", a, b);
+	else if( a < b) printf("%i %i", b, a);
+	else printf("%i %i", a, b);
 	
 	
 	
